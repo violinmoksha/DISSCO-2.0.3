@@ -401,14 +401,14 @@ std::string FileOperations::pickDatFile(MainWindow* _mainWindow){
   //Add filters, so that only certain file types can be selected:
 
   Glib::RefPtr<Gtk::FileFilter> filter_dat;
-  filter_dat.set_name(".dat files");
-  filter_dat.add_pattern("*.dat");
+  filter_dat->set_name(".dat files");
+  filter_dat->add_pattern("*.dat");
   dialog.add_filter(filter_dat);
 
 
   Glib::RefPtr<Gtk::FileFilter> filter_any;
-  filter_any.set_name("Any files");
-  filter_any.add_pattern("*");
+  filter_any->set_name("Any files");
+  filter_any->add_pattern("*");
   dialog.add_filter(filter_any);
 
   //Show the dialog and wait for a user response:
@@ -464,14 +464,14 @@ std::string FileOperations::pickLibFile(
   //Add filters, so that only certain file types can be selected:
 
         Glib::RefPtr<Gtk::FileFilter> filter_lib;
-        filter_lib.set_name(".lib files");
-        filter_lib.add_pattern("*.lib");
+        filter_lib->set_name(".lib files");
+        filter_lib->add_pattern("*.lib");
         dialog.add_filter(filter_lib);
 
 
         Glib::RefPtr<Gtk::FileFilter> filter_any;
-        filter_any.set_name("Any files");
-        filter_any.add_pattern("*");
+        filter_any->set_name("Any files");
+        filter_any->add_pattern("*");
         dialog.add_filter(filter_any);
 
   //Show the dialog and wait for a user response:
