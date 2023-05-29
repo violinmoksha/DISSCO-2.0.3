@@ -2789,7 +2789,7 @@ void EventAttributesViewController::LayerBox::on_label_drop_drag_data_received(
   set_size_request(-1, layerInEvent->size()*25 + 140);
 
 
-  Gtk::Adjustment* adjustment = m_ScrolledWindow2.get_vadjustment();
+  Glib::RefPtr<Gtk::Adjustment> adjustment = m_ScrolledWindow2.get_vadjustment();
   adjustment->set_value(adjustment->get_upper());
 }
 
