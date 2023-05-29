@@ -400,13 +400,13 @@ std::string FileOperations::pickDatFile(MainWindow* _mainWindow){
   dialog.add_button(Gtk::Stock::CANCEL, Gtk::RESPONSE_CANCEL);
   //Add filters, so that only certain file types can be selected:
 
-  Gtk::FileFilter filter_dat;
+  Glib::RefPtr<Gtk::FileFilter> filter_dat;
   filter_dat.set_name(".dat files");
   filter_dat.add_pattern("*.dat");
   dialog.add_filter(filter_dat);
 
 
-  Gtk::FileFilter filter_any;
+  Glib::RefPtr<Gtk::FileFilter> filter_any;
   filter_any.set_name("Any files");
   filter_any.add_pattern("*");
   dialog.add_filter(filter_any);
