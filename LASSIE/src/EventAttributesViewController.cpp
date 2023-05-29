@@ -3533,12 +3533,12 @@ EventAttributesViewController::LayerBox::LayerBox(
   //Make m_Label_Drop a DnD drop destination:
 
   //using enable_model_drag_dest insted of drag_dest_set here!!
-  drag_dest_set(_projectView->listTargets);
+  //drag_dest_set(_projectView->listTargets);
   //Connect signals:
-  signal_drag_data_received().connect(
-    sigc::mem_fun(
-      *this, &EventAttributesViewController::LayerBox::on_label_drop_drag_data_received) );
-  show_all_children();
+  // signal_drag_data_received().connect(
+  //   sigc::mem_fun(
+  //     *this, &EventAttributesViewController::LayerBox::on_label_drop_drag_data_received) );
+  // show_all_children();
 
 }
 
