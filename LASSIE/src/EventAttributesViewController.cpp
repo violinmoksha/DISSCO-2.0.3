@@ -5281,7 +5281,7 @@ void EventAttributesViewController::addPartialButtonClicked(){
         "SoundAttributesNumPartialEntry", entry);
   entry->set_text ( currentlyShownEvent->getEventExtraInfo()->getNumPartials());
   show_all_children();
-  Gtk::Adjustment adjustment = scrolledWindow.get_vadjustment();
+  Gtk::Adjustment adjustment = *scrolledWindow.get_vadjustment();
   adjustment.set_value(adjustment.get_upper());
 
 }
