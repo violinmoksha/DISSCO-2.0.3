@@ -463,13 +463,13 @@ std::string FileOperations::pickLibFile(
         dialog.add_button(Gtk::Stock::CANCEL, Gtk::RESPONSE_CANCEL);
   //Add filters, so that only certain file types can be selected:
 
-        Gtk::FileFilter filter_lib;
+        Glib::RefPtr<Gtk::FileFilter> filter_lib;
         filter_lib.set_name(".lib files");
         filter_lib.add_pattern("*.lib");
         dialog.add_filter(filter_lib);
 
 
-        Gtk::FileFilter filter_any;
+        Glib::RefPtr<Gtk::FileFilter> filter_any;
         filter_any.set_name("Any files");
         filter_any.add_pattern("*");
         dialog.add_filter(filter_any);
