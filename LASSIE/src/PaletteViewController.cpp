@@ -119,17 +119,17 @@ PaletteViewController::PaletteViewController(SharedPointers* _sharedPointers):
 
   //Make m_Button_Drag a DnD drag source:
   //palette.drag_source_set(projectView->listTargets);
-   viewName.drag_source_set(projectView->listTargets);
-   palette.enable_model_drag_source(
-   projectView->listTargets,Gdk::MODIFIER_MASK,Gdk::ACTION_COPY);
+  //  viewName.drag_source_set(projectView->listTargets);
+  //  palette.enable_model_drag_source(
+  //  projectView->listTargets,Gdk::MODIFIER_MASK,Gdk::ACTION_COPY);
 
 
-   //Connect signals: bind current event to the signal
-   palette.signal_drag_data_get().connect(
-     sigc::mem_fun(*this, &PaletteViewController::on_button_drag_data_get));
+  //  //Connect signals: bind current event to the signal
+  //  palette.signal_drag_data_get().connect(
+  //    sigc::mem_fun(*this, &PaletteViewController::on_button_drag_data_get));
 
-   viewName.signal_drag_data_get().connect(
-     sigc::mem_fun(*this, &PaletteViewController::on_button_drag_data_get));
+  //  viewName.signal_drag_data_get().connect(
+  //    sigc::mem_fun(*this, &PaletteViewController::on_button_drag_data_get));
 
   //////////////////////end test ////////////////////////////////////////
 
